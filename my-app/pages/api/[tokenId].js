@@ -22,14 +22,13 @@ export default function handler(req, res) {
     // we first need to create an generic api endpoint to serve multiple nfts
     // next.js make use of an dynamic api by
     // typing the file name in []
-    // my base Uri is my website link https://nft-collection-web3.vercel.app/api/
 
 
     // we want a name, a description and an image for our nft metadata
     // the url for the image must be public
     const name = 'Crypto Dev #${tokenId}';
     const description = "CryptoDevs is an NFT Collection for Web3 Developers";
-    const image = 'https://raw.githubusercontent.com/LearnWeb3DAO/NFT-Collection/main/my-app/public/cryptodevs/${Number(tokenId) - 1}.svg';
+    const image = 'https://raw.githubusercontent.com/LearnWeb3DAO/NFT-Collection/main/my-app/public/cryptodevs/${tokenId}.svg';
     //url need to be public accesible, we replace the number svg with token id
 
     // we return an object
