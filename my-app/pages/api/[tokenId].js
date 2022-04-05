@@ -26,15 +26,13 @@ export default function handler(req, res) {
 
     // we want a name, a description and an image for our nft metadata
     // the url for the image must be public
-    const name = 'Crypto Dev #${tokenId}';
-    const description = "CryptoDevs is an NFT Collection for Web3 Developers";
-    const image = 'https://raw.githubusercontent.com/LearnWeb3DAO/NFT-Collection/main/my-app/public/cryptodevs/${tokenId}.svg';
+    const image_url = 'https://raw.githubusercontent.com/LearnWeb3DAO/NFT-Collection/main/my-app/public/cryptodevs/';
     //url need to be public accesible, we replace the number svg with token id
 
     // we return an object
-    return res.json({
-        name: name,
-        description: description,
-        image: image,
+     res.status(200).json({
+    name: "Crypto Dev #" + tokenId,
+    description: "Crypto Dev is a collection of developers in crypto",
+    image: image_url + tokenId + ".svg",
     });
 }
