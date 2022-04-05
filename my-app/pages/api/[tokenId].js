@@ -22,6 +22,7 @@ export default function handler(req, res) {
     // we first need to create an generic api endpoint to serve multiple nfts
     // next.js make use of an dynamic api by
     // typing the file name in []
+    // my base Uri is my website link https://nft-collection-web3.vercel.app/api/
 
 
     // we want a name, a description and an image for our nft metadata
